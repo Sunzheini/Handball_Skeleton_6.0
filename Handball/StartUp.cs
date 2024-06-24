@@ -1,6 +1,7 @@
 ﻿using Handball.Core;
 using Handball.Core.Contracts;
 
+
 namespace Handball
 {
     public class StartUp
