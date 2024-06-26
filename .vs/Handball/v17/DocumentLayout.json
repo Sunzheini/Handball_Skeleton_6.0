@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|c:\\appl\\projects\\c#\\handball_skeleton_6.0\\handball\\core\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|solutionrelative:handball\\core\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|c:\\appl\\projects\\c#\\handball_skeleton_6.0\\handball\\models\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|solutionrelative:handball\\models\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|c:\\appl\\projects\\c#\\handball_skeleton_6.0\\handball\\models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|solutionrelative:handball\\models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|c:\\appl\\projects\\c#\\handball_skeleton_6.0\\handball\\models\\contracts\\iplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|solutionrelative:handball\\models\\contracts\\iplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|c:\\appl\\projects\\c#\\handball_skeleton_6.0\\handball\\repositories\\teamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|solutionrelative:handball\\repositories\\teamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|c:\\appl\\projects\\c#\\handball_skeleton_6.0\\handball\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|solutionrelative:handball\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|c:\\appl\\projects\\c#\\handball_skeleton_6.0\\handball\\repositories\\playerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|solutionrelative:handball\\repositories\\playerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|c:\\appl\\projects\\c#\\handball_skeleton_6.0\\handball\\utilities\\messages\\outputmessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|solutionrelative:handball\\utilities\\messages\\outputmessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|c:\\appl\\projects\\c#\\handball_skeleton_6.0\\handball\\core\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{048C2024-3C69-4C3E-A49E-08177C1E35B7}|Handball\\Handball.csproj|solutionrelative:handball\\core\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +38,96 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OutputMessages.cs",
+              "DocumentMoniker": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\Utilities\\Messages\\OutputMessages.cs",
+              "RelativeDocumentMoniker": "Handball\\Utilities\\Messages\\OutputMessages.cs",
+              "ToolTip": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\Utilities\\Messages\\OutputMessages.cs",
+              "RelativeToolTip": "Handball\\Utilities\\Messages\\OutputMessages.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T05:08:24.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Engine.cs",
+              "DocumentMoniker": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\Core\\Engine.cs",
+              "RelativeDocumentMoniker": "Handball\\Core\\Engine.cs",
+              "ToolTip": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\Core\\Engine.cs",
+              "RelativeToolTip": "Handball\\Core\\Engine.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T07:30:48.438Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "StartUp.cs",
-              "DocumentMoniker": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\StartUp.cs",
-              "RelativeDocumentMoniker": "Handball\\StartUp.cs",
-              "ToolTip": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\StartUp.cs",
-              "RelativeToolTip": "Handball\\StartUp.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T11:16:25.245Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IPlayer.cs",
-              "DocumentMoniker": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\Models\\Contracts\\IPlayer.cs",
-              "RelativeDocumentMoniker": "Handball\\Models\\Contracts\\IPlayer.cs",
-              "ToolTip": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\Models\\Contracts\\IPlayer.cs",
-              "RelativeToolTip": "Handball\\Models\\Contracts\\IPlayer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T11:40:51.625Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\Models\\Player.cs",
               "RelativeDocumentMoniker": "Handball\\Models\\Player.cs",
               "ToolTip": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\Models\\Player.cs",
               "RelativeToolTip": "Handball\\Models\\Player.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
+              "ViewState": "AQIAADUAAAAAAAAAAAAwwEkAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-24T11:39:29.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Team.cs",
+              "DocumentMoniker": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\Models\\Team.cs",
+              "RelativeDocumentMoniker": "Handball\\Models\\Team.cs",
+              "ToolTip": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\Models\\Team.cs",
+              "RelativeToolTip": "Handball\\Models\\Team.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAqwBgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T06:07:58.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlayerRepository.cs",
+              "DocumentMoniker": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\Repositories\\PlayerRepository.cs",
+              "RelativeDocumentMoniker": "Handball\\Repositories\\PlayerRepository.cs",
+              "ToolTip": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\Repositories\\PlayerRepository.cs",
+              "RelativeToolTip": "Handball\\Repositories\\PlayerRepository.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwAgAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T07:03:23.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TeamRepository.cs",
+              "DocumentMoniker": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\Repositories\\TeamRepository.cs",
+              "RelativeDocumentMoniker": "Handball\\Repositories\\TeamRepository.cs",
+              "ToolTip": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\Repositories\\TeamRepository.cs",
+              "RelativeToolTip": "Handball\\Repositories\\TeamRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T07:03:40.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Controller.cs",
+              "DocumentMoniker": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\Core\\Controller.cs",
+              "RelativeDocumentMoniker": "Handball\\Core\\Controller.cs",
+              "ToolTip": "C:\\Appl\\Projects\\C#\\Handball_Skeleton_6.0\\Handball\\Core\\Controller.cs",
+              "RelativeToolTip": "Handball\\Core\\Controller.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAYwI0AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T07:31:05.001Z",
               "EditorCaption": ""
             }
           ]

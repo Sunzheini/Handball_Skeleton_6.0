@@ -2,18 +2,20 @@
 {
     internal class Goalkeeper : Player
     {
-        public Goalkeeper(string name, double rating) : base(name, 2.5)
-        {
-        }
+        private double increaseRatingBy = 0.75;
+        private double decreaseRatingBy = 1.25;
 
-        public override void DecreaseRating()
-        {
-            this.Rating -= 1.25;
+        public Goalkeeper(string name) : base(name, 2.5)
+        { 
         }
 
         public override void IncreaseRating()
         {
-            this.Rating += 0.75;
+            Rating += increaseRatingBy;
+        }
+        public override void DecreaseRating()
+        {
+            Rating -= decreaseRatingBy;
         }
     }
 }

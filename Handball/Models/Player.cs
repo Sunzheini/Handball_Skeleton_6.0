@@ -8,32 +8,85 @@ namespace Handball.Models
 {
     public abstract class Player : IPlayer
     {
+        // --------------------------------------------------------
+        // Fields
+        // --------------------------------------------------------
+        private string name;
+        private double rating;
+        private string team;
+
+        private int maximumRatingValue = 10;
+        private int minimumRatingValue = 1;
+
+        // --------------------------------------------------------
+        // Constructors
+        // --------------------------------------------------------
+        public Player(string name, double rating)
+        {
+            this.Name = name;
+            this.Rating = rating;
+        }
+
+        // --------------------------------------------------------
+        // Getters and Setters
+        // --------------------------------------------------------
         public string Name
         {
-            get { return Name; }
-            set 
+            get => name;
+            private set
             {
-                if (string.IsNullOrEmpty(value))
+                if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentException(ExceptionMessages.InvalidName);
+                    throw new ArgumentException(ExceptionMessages.PlayerNameNull);
                 }
-                Name = value;
+                name = value;
             }
         }
 
-        public void DecreaseRating()
+        public double Rating
         {
-            throw new NotImplementedException();
+            get => rating;
+            protected set
+            {
+                if (value < minimumRatingValue || value > maximumRatingValue)
+                {
+                    return;
+                }
+                else
+                {
+                    rating = value;
+                }
+            }
         }
 
-        public void IncreaseRating()
+        public string Team
         {
-            throw new NotImplementedException();
+            get => team;
         }
+
+        // --------------------------------------------------------
+        // Methods
+        // --------------------------------------------------------
+        public abstract void IncreaseRating();
+
+        public abstract void DecreaseRating();
 
         public void JoinTeam(string name)
         {
-            throw new NotImplementedException();
+            this.team = name;
+        }
+
+        // --------------------------------------------------------
+        // Overrides
+        // --------------------------------------------------------
+        public override string ToString()
+        {
+            StringBuilder result = new StringBuilder();
+
+            result.AppendLine($"{this.GetType().Name}: {this.Name}");
+            result.AppendLine($"--Rating: {this.Rating}");
+
+            return result.ToString().TrimEnd();
         }
     }
 }

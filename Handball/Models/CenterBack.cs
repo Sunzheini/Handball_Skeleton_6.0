@@ -2,18 +2,21 @@
 {
     internal class CenterBack : Player
     {
-        public CenterBack(string name, double rating) : base(name, 4)
+        private double increaseRatingBy = 1;
+        private double decreaseRatingBy = 1;
+
+        public CenterBack(string name) : base(name, 4)
         {
         }
 
         public override void DecreaseRating()
         {
-            this.Rating -= 1;
+            Rating -= decreaseRatingBy;
         }
 
         public override void IncreaseRating()
         {
-            this.Rating += 1;
+            Rating += increaseRatingBy;
         }
     }
 }

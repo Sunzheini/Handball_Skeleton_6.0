@@ -4,70 +4,96 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Xml.Linq;
 
 
 namespace Handball.Models
 {
     public class Team : ITeam
     {
-        private string _name;
+        // --------------------------------------------------------
+        // Fields
+        // --------------------------------------------------------
+        private string name;
+        private int pointsEarned;
+        private double overallRating;
+        private List<IPlayer> players;
 
+        // --------------------------------------------------------
+        // Constructors
+        // --------------------------------------------------------
+        public Team(string name)
+        {
+            Name = name;
+            PointsEarned = 0;
+        }
+
+        // --------------------------------------------------------
+        // Getters and Setters
+        // --------------------------------------------------------
         public string Name
         {
-            get { return _name; }
-            private set {
-                if (string.IsNullOrEmpty(value))
+            get => name;
+            private set
+            {
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException(ExceptionMessages.TeamNameNull);
                 }
-                _name = value;
+                name = value;
             }
         }
-
-        private int _pointsEarned = 0;
 
         public int PointsEarned
         {
-            get { return _pointsEarned; }
-            private set { _pointsEarned = value; }
-        }
-
-        private double _overallRating;
-
-        public double OverallRating
-        {
-            get 
+            get => pointsEarned;
+            private set
             {
-                if (Players.Count == 0)
-                {
-                    return 0;
-                }
-                else
-                {
-                    double average = 0;
-                    foreach (var player in Players)
-                    {
-                        average += player.Rating;
-                    }
-                    average /= Players.Count;
-                    return Math.Round(average, 2);
-                }
+                pointsEarned = value;
             }
         }
 
-        private readonly List<IPlayer> _players;
-
-        public List<IPlayer> Players
+        private double GetAverageRatingOfAllPlayers()
         {
-            get { return _players; }
+            if (players.Count == 0)
+            {
+                return 0;
+            }
+
+            return Math.Round(players.Average(p => p.Rating), 2);
         }
 
-        public void Draw()
+        public double OverallRating
         {
-            this.PointsEarned += 1;
+            get => GetAverageRatingOfAllPlayers();
+        }
 
-            IPlayer goalkeeper = _players.First(p => p is Goalkeeper);
+        public IReadOnlyCollection<IPlayer> Players
+        {
+            get => players.AsReadOnly();
+        }
+
+        // --------------------------------------------------------
+        // Methods
+        // --------------------------------------------------------
+        private void IncreaseRatingOfAllPlayers()
+        {
+            foreach (var player in players)
+            {
+                player.IncreaseRating();
+            }
+        }
+
+        private void DecreaseRatingOfAllPlayers()
+        {
+            foreach (var player in players)
+            {
+                player.DecreaseRating();
+            }
+        }
+
+        private void IncreaseRatingOfGoalKeeper()
+        {
+            IPlayer goalkeeper = players.FirstOrDefault(p => p is Goalkeeper);
 
             if (goalkeeper != null)
             {
@@ -75,60 +101,49 @@ namespace Handball.Models
             }
         }
 
+        public void Win()
+        {
+            PointsEarned += 3;
+            IncreaseRatingOfAllPlayers();
+        }
+
         public void Lose()
         {
-            foreach (var player in this._players)
-            {
-                player.DecreaseRating();
-            }
+            DecreaseRatingOfAllPlayers();
+        }
+
+        public void Draw()
+        {
+            PointsEarned += 1;
+            IncreaseRatingOfGoalKeeper();
         }
 
         public void SignContract(IPlayer player)
         {
-            this.Players.Add(player);
-        }
-
-        public void Win()
-        {
-            this.PointsEarned += 3;
-
-            foreach (var player in this._players)
+            if (player != null)
             {
-                player.IncreaseRating();
+                players.Add(player);
             }
         }
 
-        private string FormattedPlayerList
-        {
-            get
-            {
-                if (Players.Count == 0)
-                {
-                    return "none";
-                }
-                else
-                {
-                    string playerList = string.Join(", ", Players.Select(player => player.Name));
-                    return playerList;
-                }
-            }
-        }
-
+        // --------------------------------------------------------
+        // Overrides
+        // --------------------------------------------------------
         public override string ToString()
         {
+            string playerNames = "none";
+            if (players.Count > 0)
+            {
+                playerNames = string.Join(", ", players.Select(p => p.Name));
+            }
+
             StringBuilder result = new StringBuilder();
 
             result.AppendLine($"Team: {Name} Points: {PointsEarned}");
             result.AppendLine($"--Overall rating: {OverallRating}");
-            result.AppendLine($"--Players: {this.FormattedPlayerList}");
+            result.AppendLine($"--Players: {playerNames}");
 
             return result.ToString().Trim();
-        }
-
-        public Team(string name)
-        {
-            this.Name = name;
-            this._players = new List<IPlayer>();
         }
     }
 }
